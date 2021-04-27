@@ -14,13 +14,14 @@ class Main extends PluginBase implements Listener {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
 
-    public function onExecute(PlayerCommandPreprocessEvent $event) {
+    public function onCommandExecute(PlayerCommandPreprocessEvent $event) {
         $message = $event->getMessage();
-        $player = $event->getPlayer();
+        $msg = explode(' ',trim($message));
         $m = substr("$message", 0, 1);
-        $me = substr($message, 1, 1);
+        $whitespace_check = substr($message, 1, 1);
+        $slash_check = substr($msg[0], -1, 1);
         if ($m == '/') {
-            if ($me === ' ') {
+            if ($whitespace_check === ' ' or $slash_check === '\\') {
                 $event->setCancelled();
             }
         }
