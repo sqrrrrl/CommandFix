@@ -1,10 +1,10 @@
 # CommandFix
 This plugin fix the glitch players can use to execute a blocked command
   * Fixed glitches
-     * / spawn
-     * /\spawn
-     * /spawn\
-     * /"spawn"
+     * / {cmd}
+     * /\\{cmd}
+     * /{cmd}\
+     * /"{cmd}"
  
 [![](https://poggit.pmmp.io/shield.state/CommandFix)](https://poggit.pmmp.io/p/CommandFix)
 
