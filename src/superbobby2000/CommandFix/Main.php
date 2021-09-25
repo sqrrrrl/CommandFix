@@ -10,7 +10,7 @@ use pocketmine\plugin\PluginBase;
 
 class Main extends PluginBase implements Listener {
 
-    public function onEnable() {
+    public function onEnable(): void {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
 
@@ -24,7 +24,7 @@ class Main extends PluginBase implements Listener {
 
         if ($m == '/') {
             if ($whitespace_check === ' ' or $whitespace_check === '\\' or $slash_check === '\\' or $quote_mark_check === '""') {
-                $event->setCancelled();
+                $event->cancel();
             }
         }
     }
