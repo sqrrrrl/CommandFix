@@ -1,9 +1,9 @@
 # CommandFix
-This plugin fix the glitch players can use to execute a blocked command
+This plugin prevents players from bypassing blocked command filters
   * Fixed glitches
      * / {cmd}
-     * /\\{cmd}
-     * /{cmd}\
+     * ~~/\\{cmd}~~ (Patched by PMMP)
+     * ~~/{cmd}\\~~ (Patched by PMMP)
      * /"{cmd}"
  
 [![](https://poggit.pmmp.io/shield.state/CommandFix)](https://poggit.pmmp.io/p/CommandFix)
