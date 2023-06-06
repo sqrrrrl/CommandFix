@@ -14,10 +14,15 @@ class Main extends PluginBase implements Listener {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
 
+
+    /**
+     * @param CommandEvent $event
+     * @priority LOWEST
+     */
     public function onCommandExecute(CommandEvent $event) {
         $message = $event->getCommand();
         $commandLine = explode(" ", trim($message));
-        str_replace("\"", "", $commandLine[0]);
+        $commandLine[0] = preg_replace(['/"/', "/:/"], "", $commandLine[0]);
         $event->setCommand(implode(" ", $commandLine));
     }
 }

@@ -5,6 +5,7 @@ This plugin prevents players from bypassing blocked command filters
      * ~~/\\{cmd}~~ (Patched by PMMP)
      * ~~/{cmd}\\~~ (Patched by PMMP)
      * /"{cmd}"
+     * /{commandregisterer}:{cmd}
  
 [![](https://poggit.pmmp.io/shield.state/CommandFix)](https://poggit.pmmp.io/p/CommandFix)
 
